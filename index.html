@@ -3,18 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Câmera</title>
+    <link rel="stylesheet" href="style.css">
+    <title>NowPlace</title>
+
 </head>
 <body>
-    <div id="camera-container">
+
+<header>
+    <h1>NowPlace</h1>
+    <p>Mostre onde você está e o que está fazendo agora.</p>
+</header>
+
+<main>
+
+    <section id="camera-container">
+
         <video id="video" autoplay playsinline></video>
-        <button id="btn-foto">Tirar fotenha</button>
-    </div>
+
+        <button id="btn-foto">
+            📷 Tirar foto do ambiente
+        </button>
+
+        <button id="btn-selfie">
+            🤳 Tirar selfie
+        </button>
+
+        <p id="status"></p>
+
+    </section>
+
     <canvas id="canvas" style="display: none;"></canvas>
-    <div id="perfil-card">
-        <h3>Foto de perfil capturada:</h3>
-        <img id="foto-resultado" src="">  
-    </div>
-    <script src="script.js"></script>
+
+    <section id="preview">
+
+        <h2>Seu Now</h2>
+
+        <div class="preview-fotos">
+
+            <div>
+                <h3>Ambiente</h3>
+                <img id="foto-ambiente" src="">
+            </div>
+
+            <div>
+                <h3>Selfie</h3>
+                <img id="foto-selfie" src="">
+            </div>
+
+        </div>
+
+        <div id="local">
+            📍 Buscando localização...
+        </div>
+
+        <button id="btn-publicar">
+            Publicar Now
+        </button>
+
+    </section>
+
+    <section id="feed">
+
+        <h2>Nows próximos</h2>
+
+        <div id="feed-conteudo"></div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
